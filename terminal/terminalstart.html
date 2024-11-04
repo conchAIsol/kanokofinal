@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="terminal.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script defer src="textAnimation.js"></script>
+  <script defer src="getIP.js"></script>
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://strawbebby228.neocities.org/terminal/arts/UI/strawberries.png' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <title>☆⋆°‧★Terminal</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="title">
+        <pre> _    _  ____  __    ___  _____  __  __  ____ 
+( \/\/ )( ___)(  )  / __)(  _  )(  \/  )( ___)
+ )    (  )__)  )(__( (__  )(_)(  )    (  )__) 
+(__/\__)(____)(____)\___)(_____)(_/\/\_)(____)
+</pre>
+      </div>
+      
+      <div id="text-container">
+        <p>Welcome to Kanoko terminal</p>
+        <p>Select command:</p>
+      </div>
+      
+      <span><a href="snake.html">Play Snake</a></span>
+      <span><a href="pong.html">Play Pong</a></span>
+      <span><a href="ascii.html">Generate ASCII Art</a></span>
+      <span><a href="donut.html">Draw donut</a></span>
+      <span><a onclick="showText('text1')" href="javascript:void(0);">Get IP</a></span>
+      <a onClick="showText('text2'); hack()" href="javascript:void(0);">Hack someone</a>
+      <div id="text1" style="display: none; margin-top: 60px;"><span id="gfg"></span><span class="blink"> ></span></div>
+      <div id="text2" style="display: none; margin-top: 60px;"><div class="data">01000110101010101010101010010101010101010101001010100010101010110101010101010101010110011010010</div>
+      <div class="data">00101010110101010100101001010110100101010111100101110110110111111000001111000101001010100101001</div>
+      <div class="data">01010101010101101010101010101010100101010101010101010010101010101010000101010111111000100100011</div>
+      <div class="data">11101010101011000010101111100100010011010101010101011111111000000000010101001010101010100000110</div>
+      <div class="data">00010110101000011111111111100101001010100010101010111111111000000010101011010100010000000010101</div>
+      <br>
+      <div class="data">The hacking operation was successful. You just hacked into someone's computer. Congratulations!</div></div> 
+      
+      <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+      <script>
+        function hack()
+        {
+          const text = baffle('.data');
+          text.set({
+            characters: '01',
+            // characters: '▒▓░ >██▒▒ ░▒▓▓▓ ▓░█ >▒▓▒█ ██▓▒ ▒▒█ ▓<█░ █▒█▒',
+            speed: 100
+        });
+        document.body.style.backgroundImage = "url('hack.gif')";
+        text.start();
+        text.reveal(5000);
+        }
+        
+    
+      </script>
+      <script language="JavaScript">
+        function showText(id)
+        {
+          document.getElementById(id).style.display = "block";
+        }
+      </script>
+
+      <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </main>
+  </body>
+</html>

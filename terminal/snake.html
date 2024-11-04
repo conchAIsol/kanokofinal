@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="terminal.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script defer src="textAnimation.js"></script>
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://strawbebby228.neocities.org/terminal/arts/UI/strawberries.png' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <title>☆⋆°‧★Snake</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /*Задаём глобальные параметры*/
+    body {
+      background: #13092D;
+      color: #0fa601;
+      
+    }
+    
+    .container {
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    }
+    
+    a {
+      align-items: start;
+      justify-content: start;
+    }
+  </style>
+  </head>
+
+<body>
+  <main>
+    <p><a href="terminalstart.html">❮ Back</a><p>
+    <p><a href="snake.html">⭯ Restart</a><p>
+    <div class="container">
+      <pre> ___  _  _    __    _  _  ____ 
+/ __)( \( )  /__\  ( )/ )( ___)
+\__ \ )  (  /(__)\  )  (  )__) 
+(___/(_)\_)(__)(__)(_)\_)(____)
+</pre>
+      <canvas id="board" width="400" height="400">Canvas</canvas>
+    </div>
+  </main>
+  
+  
+  <!-- Сам скрипт с игрой -->
+  <script>
+    const canvas = document.getElementById('board');
+const context = canvas.getContext('2d');
+let speed = 10; // скорость обновления экрана
+let tileCount = 20;
+let tileSize = canvas.clientWidth / tileCount - 2;
+
+// позиция головы змейки
+let headX = 10;
+let headY = 10;
+
+// направление движения змейки по двум осям
+let xDirection = 0;
+let yDirection = 0;
+
+// позиция яблока
+let appleX = 5;
+let appleY = 5;
+
+// массив для частей змейки
+const snakeParts = [];
+// начальный размер змейки
+let tailLength = 2;
+
+class snakePart {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+// счёт
+let score = 0;
+
+function drawScore() {
+    context.fillStyle = 'rgb(15, 166, 1)';
+    context.shadowColor = 'rgb(15, 166, 1)';
+    context.shadowBlur = 5;
+    context.font = "20px VT323";
+    context.fillText("Score: " + score, canvas.clientWidth - 80, 20);
+}
+
+function keyDown(event) {
+    // клавиша вверх
+    if(event.keyCode == 38){
+        if(yDirection == 1)
+            return; // запрещаем двигаться на себя
+        yDirection = -1;
+        xDirection = 0;
+    }
+    // клавиша вниз
+    if(event.keyCode == 40){
+        if(yDirection == -1)
+            return; // запрещаем двигаться на себя
+        yDirection = 1;
+        xDirection = 0;
+    }
+    // клавиша влево
+    if(event.keyCode == 37){
+        if(xDirection == 1)
+            return; // запрещаем двигаться на себя
+        yDirection = 0;
+        xDirection = -1;
+    }
+    // клавиша вправо
+    if(event.keyCode == 39){
+        if(xDirection == -1)
+            return; // запрещаем двигаться на себя
+        yDirection = 0;
+        xDirection = 1;
+    }
+}
+
+function changeSnakePosition() {
+    headX = headX + xDirection;
+    headY = headY + yDirection;
+}
+
+function drawSnake() {
+   context.fillStyle = 'rgb(15, 166, 1)';
+   context.shadowColor = 'rgb(15, 166, 1)';
+   context.shadowBlur = 5;
+    // проходим в цикле по массиву
+    for (let i = 0; i < snakeParts.length; i++) {
+        // рисуем хвост змейки в виде квадратика зелёного цвета
+        let part = snakeParts[i]
+        context.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
+    }
+    // добавляем квадратики к змейке через push
+    snakeParts.push(new snakePart(headX, headY));
+    if (snakeParts.length > tailLength) {
+        snakeParts.shift(); // убираем лишнее
+    }
+
+    context.fillStyle = 'rgb(15, 166, 1)';
+    context.shadowColor = 'rgb(15, 166, 1)';
+    context.shadowBlur = 5;
+    context.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
+}
+
+function drawApple() {
+    context.fillStyle = 'rgb(15, 166, 1)';
+    context.shadowColor = 'rgb(15, 166, 1)';
+    context.shadowBlur = 5;
+    context.fillRect(appleX * tileCount, appleY * tileCount, tileSize, tileSize);
+}
+
+function checkCollision() {
+    // если позиции яблока и головы змейки совпали
+    if (appleX == headX && appleY == headY) {
+        // выводим яблоко в случайном месте по горизонтали
+        appleX = Math.floor(Math.random() * tileCount);
+         // выводим яблоко в случайном месте по вертикали
+        appleY = Math.floor(Math.random() * tileCount);
+        
+        // увеличиваем размер змейки
+        tailLength++;
+        // увеличиваем счёт
+        score++;
+    }
+}
+
+function isGameOver() {
+    let gameOver = false;
+    // проверяем начало игры
+    if (yDirection === 0 && xDirection === 0) {
+        return false;
+    }
+    if (headX < 0) {// если змейка врезалась в левую стену
+        gameOver = true;
+    }
+    else if (headX === tileCount) {// в правую
+        gameOver = true;
+    }
+    else if (headY < 0) {// в потолок
+        gameOver = true;
+    }
+    else if (headY === tileCount) {// в низ
+        gameOver = true;
+    }
+
+    //если змейка укусила себя
+    for (let i = 0; i < snakeParts.length; i++) {
+        let part = snakeParts[i];
+        if (part.x === headX && part.y === headY) {
+            gameOver = true;
+            break;
+        }
+    }
+
+    // Выводим сообщение
+    if (gameOver) {
+        context.fillStyle = 'rgb(15, 166, 1)';
+        context.shadowColor = 'rgb(15, 166, 1)';
+        context.shadowBlur = 5;
+        context.font = "80px VT323";
+        context.fillText("GAME OVER", canvas.clientWidth / 6.5, canvas.clientHeight / 2);
+    }
+
+    return gameOver;
+}
+
+function drawGame() {
+    changeSnakePosition();
+
+    let result = isGameOver();
+    if (result) {
+        return;
+    }
+
+    clearScreen();
+    drawSnake();
+
+    drawApple();
+
+    checkCollision();
+    drawScore();
+
+    setTimeout(drawGame, 1000 / speed); // обновляем экран 7 раз в секунду
+}
+
+function clearScreen() {
+    context.fillStyle = 'rgb(19, 9, 45)';
+    context.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+}
+
+
+
+// слушатель нажатий клавиш
+document.body.addEventListener('keydown', keyDown);
+
+drawGame();
+
+  </script>
+</body>
+
+</html>

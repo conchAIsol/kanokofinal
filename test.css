@@ -1,0 +1,1208 @@
+:root {
+    --title-font-size: 7vw;
+    --box-bg: #fff;
+    --background: #fff;
+    --stroke-color: #13092D;
+    --cursor_default: url(https://cur.cursors-4u.net/cursors/cur-6/cur588.cur), default;
+    --cursor_pointer: url(https://cur.cursors-4u.net/cursors/cur-6/cur586.cur), pointer;
+    --cursor_text: url(https://cur.cursors-4u.net/cursors/cur-6/cur590.cur), text;
+    --cursor_move: url(https://cur.cursors-4u.net/cursors/cur-6/cur587.cur), move;
+  }
+
+  #chatwrapper::before{
+    content: "";
+    background-image: url('chatbg.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    opacity: 0.3;
+  }
+
+/* THEME SETTINGS */
+:root,
+
+:root.hotpink {
+    --main: #ff79a7;
+    --muted: #e02464;
+    --transparent: rgba(255, 121, 167, 0.3);
+    --berry: "🍓";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/1/12/Pink_flower.png');
+    
+    
+    --blinkie1: url("https://artwork.neocities.org/photos/blinkies/mymelody.gif");
+    --blinkie2: url("https://gifcity.carrd.co/assets/images/gallery22/6e2cfa7b.gif?v=ef10e8f3");
+    --blinkie3: url("https://blinkies.cafe/b/display/0123-glitterpink.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/alcremie.gif");
+    --blinkie5: url("https://artwork.neocities.org/photos/blinkies/blinkasaurus.gif");
+    --blinkie6: url("https://gifcity.carrd.co/assets/images/gallery200/16c772e3.gif?v=ef10e8f3");
+    --blinkie7: url("https://collection.ju.mp/assets/images/gallery09/4f0993df.gif?v=0236594d");
+    --blinkie4: url("https://plasticdino.neocities.org/blinkie/tumblr_pitux4JqAM1x5gwxfo1_250.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/hellokittyfan.gif");
+    --blinkie10: url("https://plasticdino.neocities.org/blinkie/iloveyou.gif");
+    --blinkie11: url("https://plasticdino.neocities.org/blinkie/blaze.gif");
+    --blinkie12: url("https://shishka.neocities.org/nofollow/img/blinkie-i-hate-fake-pngs.gif");
+    
+    --ad: url("https://web.archive.org/web/20090829105332im_/http://www.geocities.com/sweepershomepage/addesignroses.gif");
+    
+}
+:root.red {
+    --main: #ff676f;
+    --muted: #d51f29;
+    --transparent: rgba(255, 103, 111, 0.3);
+    --berry: "🍒";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/6/6f/Chess.png');
+    
+    --blinkie1: url("https://y2k.neocities.org/blinkiez/tumblr_inline_pbix8bejE51tehlgd_500.gif");
+    --blinkie2: url("https://im-baby.neocities.org/blinkies/tumblr_pj9af37Zgw1xdn86no1_250.gif");
+    --blinkie3: url("https://blinki.es/blinkies/food/apples.gif");
+    --blinkie4: url("https://y2k.neocities.org/blinkiez/tumblr_static_bggpy3iw9w084g0wg8so448s4.gif");
+    --blinkie5: url("https://blinki.es/blinkies/funny/just-pretend-to-do-it.gif");
+    --blinkie6: url("https://gifcity.carrd.co/assets/images/gallery14/50aa2966.gif?v=ef10e8f3");
+    --blinkie7: url("https://plasticdino.neocities.org/blinkie/ladybugs3.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/godblesstheinternet.gif");
+    --blinkie9: url("https://y2k.neocities.org/blinkiez/tumblr_p3p8z0TZe01tganp7o1_250.gif");
+    --blinkie10: url("https://gifcity.carrd.co/assets/images/gallery14/17c31e1c.gif?v=ef10e8f3");
+    --blinkie11: url("https://gifcity.carrd.co/assets/images/gallery158/a5b27954.gif?v=ef10e8f3");
+    --blinkie12: url("https://plasticdino.neocities.org/blinkie/simplywicked.gif");
+    
+    --ad: url("https://web.archive.org/web/20091022103224/http://www.geocities.com/sweepershomepage/addesign.gif");
+}
+:root.orange {
+    --main: #ff9b21;
+    --muted: #e86705;
+    --transparent: rgba(255, 155, 33, 0.3);
+    --berry: "🍊";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/c/cd/Fish_%28Windows_XP%29.png');
+    
+    --blinkie1: url("https://blinki.es/blinkies/funny/does-this-annoy.gif");
+    --blinkie2: url("https://64.media.tumblr.com/5b1b8a673b07b724674fa67315aed06e/5469480d83a62fc3-ff/s250x400/851044e7e6b0d9c60f44f77bd9c2336d4bf437df.gifv");
+    --blinkie3: url("https://blinkies.cafe/b/display/0066-orangekitty.gif");
+    --blinkie4: url("https://blinki.es/blinkies/food/oranges.gif");
+    --blinkie5: url("https://i1.glitter-graphics.org/pub/2222/2222441uiwhm9ef60.gif");
+    --blinkie6: url("https://gifcity.carrd.co/assets/images/gallery16/be6e8833.gif?v=ef10e8f3");
+    --blinkie7: url("https://c.tenor.com/CA3BGdEMfDQAAAAC/tenor.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/f0d5119b_original.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/tumblr_p2gunllrti1wclo4ko3_250.gif");
+    --blinkie10: url("https://plasticdino.neocities.org/blinkie/blinkie-i-view-source.gif");
+    --blinkie11: url("https://gifcity.carrd.co/assets/images/gallery168/9abc1857.gif?v=ef10e8f3");
+    --blinkie12: url("https://gifcity.carrd.co/assets/images/gallery184/a41d11e7.gif?v=ef10e8f3");
+    
+    --ad: url("https://web.archive.org/web/20091027031133im_/http://www.geocities.com/arminvanbuuren2004/orangebizs.gif");
+}
+:root.yellow {
+    --main: #f4dd27;
+    --muted: #cfab0c;
+    --transparent: rgba(244, 221, 39, 0.3);
+    --berry: "🍌";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/3/38/Duck.png');
+    
+    --blinkie1: url("https://artwork.neocities.org/photos/blinkies/sanrioblinkie2.gif");
+    --blinkie2: url("https://artwork.neocities.org/photos/blinkies/blinktastic_timeisonmysdie.gif");
+    --blinkie3: url("https://i8.glitter-graphics.org/pub/538/538228q8z0geap9t.gif");
+    --blinkie4: url("https://i10.glitter-graphics.org/pub/476/476190ehs2jy3x0v.gif");
+    --blinkie5: url("https://blinki.es/blinkies/other/neopets.gif");
+    --blinkie6: url("https://plasticdino.neocities.org/blinkie/lipton.gif");
+    --blinkie7: url("https://plasticdino.neocities.org/blinkie/cheese.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/blinkiesrule.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/gudetama.gif");
+    --blinkie10: url("https://coco-gal.neocities.org/blyellow5.gif");
+    --blinkie11: url("https://plasticdino.neocities.org/blinkie/tumblr_77328dc77956ff166a00706e6a1977c7_cf14b7d4_250.gif");
+    --blinkie12: url("https://plasticdino.neocities.org/blinkie/summer.gif");
+    
+    --ad: url("https://web.archive.org/web/20091026000842/http://geocities.com/memoriesfade/ad.gif");
+}
+:root.green {
+    --main: #35e825;
+    --muted: #0fa601;
+    --transparent: rgba(53, 232, 37, 0.3);
+    --berry: "🍏";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/a/a6/Frog_%28Windows_XP%29.png');
+    
+    --blinkie1: url("https://artwork.neocities.org/photos/blinkies/sanrioblinkie.gif");
+    --blinkie2: url("https://i8.glitter-graphics.org/pub/758/758548ssjii53fgv.gif");
+    --blinkie3: url("https://artwork.neocities.org/photos/blinkies/3562402mhkqz23a1g.gif");
+    --blinkie4: url("https://artwork.neocities.org/photos/blinkies/htmljunkie.gif");
+    --blinkie5: url("https://blinkies.cafe/b/display/0068-mainframe.gif");
+    --blinkie6: url("https://plasticdino.neocities.org/blinkie/buggn.gif");
+    --blinkie7: url("https://plasticdino.neocities.org/blinkie/typoqueen.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/blinkie3.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/wicked.gif");
+    --blinkie10: url("https://c.tenor.com/f5mwqZmiTncAAAAC/tenor.gif");
+    --blinkie11: url("https://shishka.neocities.org/nofollow/img/blinkie-fake-download-button.gif");
+    --blinkie12: url("https://plasticdino.neocities.org/blinkie/woohoo.gif");
+    
+    --ad: url("https://web.archive.org/web/20090901232609/http://www.geocities.com/mizingdijitz/addesign-OldiesMusicNewBand.gif");
+}
+:root.turquoise {
+    --main: #2ac0f4;
+    --muted: #0077b9;
+    --transparent: rgba(42, 192, 244, 0.3);
+    --berry: "🌱";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/c/ca/Snowflake_%28Windows_XP%29.png');
+    
+    --blinkie1: url("https://artwork.neocities.org/photos/blinkies/cinnamoroll.gif");
+    --blinkie2: url("https://artwork.neocities.org/photos/blinkies/lovemspaint.gif");
+    --blinkie3: url("https://i4.glitter-graphics.org/pub/538/538224vqrv72d0m9.gif");
+    --blinkie4: url("https://artwork.neocities.org/photos/blinkies/water.gif");
+    --blinkie5: url("https://artwork.neocities.org/photos/blinkies/dreaminpixels.gif");
+    --blinkie6: url("https://collection.ju.mp/assets/images/gallery09/2b1df7f4.gif?v=0236594d");
+    --blinkie7: url("https://plasticdino.neocities.org/blinkie/4c54c537.gif");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/tumblr_pmuivtxCZl1y5fz9ko6_250.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/twinkle.gif");
+    --blinkie10: url("https://gifcity.carrd.co/assets/images/gallery20/66d39170.gif?v=ef10e8f3");
+    --blinkie11: url("https://plasticdino.neocities.org/blinkie/meowchi.gif");
+    --blinkie12: url("https://plasticdino.neocities.org/blinkie/tumblr_815d4ce12b5970cca4228d829e4173fa_24a61a4b_250.gif");
+    
+    --ad: url("https://web.archive.org/web/20010623173119/http://www.geocities.com:80/et_tse/advertisement/csbanner_anim_03.gif");
+}
+:root.indigo {
+    --main: #264fff;
+    --muted: #0027cd;
+    --transparent: rgba(38, 79, 255, 0.3);
+    --berry: "🫐";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/f/f7/Red_flower.png');
+    
+    --blinkie1: url("https://gifcity.carrd.co/assets/images/gallery20/64260535.gif?v=ef10e8f3");
+    --blinkie2: url("https://gifcity.carrd.co/assets/images/gallery20/154c044f.gif?v=ef10e8f3");
+    --blinkie3: url("https://plasticdino.neocities.org/blinkie/polygonwave2.gif");
+    --blinkie4: url("https://i3.glitter-graphics.org/pub/516/516643jrqdokk268.gif");
+    --blinkie5: url("https://artwork.neocities.org/photos/blinkies/nightowl.gif");
+    --blinkie6: url("https://collection.ju.mp/assets/images/gallery02/89b09968.gif?v=0236594d");
+    --blinkie7: url("https://plasticdino.neocities.org/blinkie/bluemillions.gif");
+    --blinkie8: url("https://artwork.neocities.org/photos/blinkies/7ciig8c.gif");
+    --blinkie9: url("https://artwork.neocities.org/photos/blinkies/stardust.gif");
+    --blinkie10: url("https://plasticdino.neocities.org/blinkie/una.gif");
+    --blinkie11: url("https://gifcity.carrd.co/assets/images/gallery20/30bd7c76.gif?v=ef10e8f3");
+    --blinkie12: url("https://gifcity.carrd.co/assets/images/gallery20/3b6ff7ee.gif?v=ef10e8f3");
+    
+    --ad: url("https://web.archive.org/web/20090829105334/http://www.geocities.com/sweepershomepage/addesign555.gif");
+}
+:root.violet {
+    --main: #c260ff;
+    --muted: #8015c3;
+    --transparent: rgba(194, 96, 255, 0.3);
+    --berry: "🍇";
+    --user: url('https://static.miraheze.org/windowswallpaperwiki/2/23/Dog_%28Windows_XP%29.png');
+    
+    --blinkie1: url("https://artwork.neocities.org/photos/blinkies/kuromi.gif");
+    --blinkie2: url("https://artwork.neocities.org/photos/blinkies/65.gif");
+    --blinkie3: url("https://blinki.es/blinkies/food/grapes.gif");
+    --blinkie4: url("https://i3.glitter-graphics.org/pub/1563/1563183dv7m2jhsv2.gif");
+    --blinkie5: url("https://artwork.neocities.org/photos/blinkies/think_pixels.gif");
+    --blinkie6: url("https://gifcity.carrd.co/assets/images/gallery21/65f75ae6.gif?v=ef10e8f3");
+    --blinkie7: url("https://gifcity.carrd.co/assets/images/gallery202/68fdc418.gif?v=ef10e8f3");
+    --blinkie8: url("https://plasticdino.neocities.org/blinkie/tumblr_9da9b7dcee1dd1e3edc84cf14ec125c9_00714c9f_250.gif");
+    --blinkie9: url("https://plasticdino.neocities.org/blinkie/harlot.gif");
+    --blinkie10: url("https://plasticdino.neocities.org/blinkie/blink39.gif");
+    --blinkie11: url("https://plasticdino.neocities.org/blinkie/addicted_to_my_pc.gif");
+    --blinkie12: url("https://gifcity.carrd.co/assets/images/gallery21/aa0ce2f9.gif?v=ef10e8f3");
+    
+    --ad: url("https://web.archive.org/web/20091025231600/http://www.geocities.com/thekookiekoko/ad_meangirls.gif");
+    
+}
+
+#hotpink { background-color: #ff79a7; }
+#red { background-color: #ff676f; }
+#orange { background-color: #ff9b21; }
+#yellow { background-color: #f4dd27; }
+#green { background-color: #3bf22a; }
+#turquoise { background-color: #2ac0f4; }
+#indigo { background-color: #264fff; }
+#violet { background-color: #c260ff; }
+
+#theme {
+  background-color: var(--muted);
+}
+
+@keyframes gradientAnimation{
+  0%{
+      background-position: 200% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
+#aiReply{
+  font-size: 25px;
+  display: block;
+  color: red;
+ 
+}
+
+#aiReply::before{
+  content: 'kanoko: ';
+  text-shadow: none;
+  background: linear-gradient(90deg, rgba(255,20,181,1) 0%, rgba(109,118,255,1) 31%, rgba(255,10,194,1) 50%, rgba(53,44,193,1) 77%, rgba(255,119,235,1) 100%);  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradientAnimation 0.5s linear infinite;
+
+}
+
+#myReply::before{
+  content: 'you: ';
+  color: black;
+}
+
+/* THEME SWITCHER */
+#theme-buttons {
+  display: flex;
+}
+
+.theme-button {
+  margin: 3px;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 20px;
+  border: solid 4px;
+  font-size: 0.5em;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--main);
+    color: var(--background);
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+	position: fixed;
+	right: 12px;
+	z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: 0;
+	background-color: var(--background);
+}
+
+.post ::-webkit-scrollbar-track {
+	border-left: 0px solid var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--main);
+	border: 2px solid var(--background);
+	border-radius: 5px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Balsamiq Sans;
+}
+
+body {
+    background: url("arts/bg/Bg.png"), linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,121,167,0) 100%);
+    background-color: var(--main);
+    background-size: 50%;
+    background-repeat: repeat-x;
+    color: var(--stroke-color);
+    font-size: 1.2em;
+    scrollbar-color: var(--main) var(--background);
+    cursor: var(--cursor_default);
+}
+
+.textarea {
+  width: 100%;
+  height: 97%;
+  border-style: none;
+  font-family: Balsamiq Sans;
+  font-size: 1em;
+  cursor: var(--cursor_text);
+}
+
+#textarea {
+  font-family: Balsamiq Sans;
+  font-size: 0.8em;
+  cursor: var(--cursor_text);
+  border: solid 2px var(--muted);
+  border-radius: 5px;
+  width: 100%;
+}
+
+a, label, input {
+  cursor: var(--cursor_pointer);
+}
+
+a {
+  text-decoration: none;
+  color: var(--stroke-color);
+}
+
+hr {
+  border-color: var(--main);
+}
+/* BUTTONS */
+button {
+    cursor: var(--cursor_pointer);
+    padding: 5px;
+    font-family: Balsamiq Sans;
+    font-size: 1em;
+}
+
+.button {
+  background: var(--main);
+  text-shadow: 1px 1px 5px var(--muted);
+  margin-right: 3px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  border: solid 3px var(--main);
+}
+
+.button1 {
+  padding: 5px;
+  border: none;
+  color: var(--stroke-color);
+  text-shadow: 0 0 5px var(--main);
+  background: none;
+}
+
+button:hover, button:active {
+    filter: brightness(110%);
+}
+
+#start_button {
+  background: linear-gradient(180deg, #fff 0%, var(--main) 100%);
+  text-shadow: 1px 1px 5px var(--muted);
+  color: #fff;
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+  font-style: italic; 
+}
+
+#start_button span{
+  padding-right: 5px;
+}
+
+#start_button:active {
+  background: linear-gradient(0deg, #fff 0%, var(--main) 100%);
+}
+
+#start_button img{
+  vertical-align: middle;
+}
+
+.buttons_row button{
+  display:inline;
+  float: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.buttons_row button:first-child {
+  border-right: none;
+}
+
+.buttons_row button:hover {
+  border-right: none;
+}
+
+#window_buttons {
+  float: right;
+}
+
+.window_button {
+  margin-left: 3px;
+  padding: 3px;
+  width: 1.8em;
+  border-radius: 5px;
+  text-align: center;
+  cursor: var(--cursor_pointer);
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  color: #fff;
+}
+
+.window_button a{
+  color: #fff;
+}
+
+#close_button {
+  color: #fff;
+  border: solid 3px;
+  background-color: #ff676f;
+  
+}
+
+.window_button:hover {
+  filter: brightness(110%);
+  border: solid 3px;
+}
+
+#window_title {
+  overflow: hidden;
+  padding: 10px;
+}
+
+header {
+  background-color: var(--muted);
+  width: 100%;
+  height: 42px;
+  border: 5px solid var(--muted);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  
+}
+
+#window_content {
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid var(--muted);
+  border-right: 5px solid var(--muted);
+}
+
+.folders_sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  top: 42px;
+  left: 5px;
+  background-color: var(--transparent);
+}
+
+.dropdown {
+  display: block;
+}
+
+.dropdown::after {
+  float: right;
+  content: "▼";
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  transition: height .4s ease;
+}
+
+.slide li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {height: 500px;} 
+
+
+#content_box {
+  width: 100%;
+  height: 98%;
+}
+
+#timer {
+  float: right;
+  margin: 15px;
+  color: #fff;
+}
+
+.container {
+  position: relative;  
+  top: 50%;
+  left: 50%;  
+  width: 750px;
+  height: 450px;  
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);  
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png),move;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32,move;
+}
+
+.list-item {  
+  position: absolute;
+  top: 0;
+  left: 0;  
+  height: 140px;
+  width: 240px;
+}
+
+.item-content {
+  height: 100%;
+  border: 0px solid rgba(123, 123, 123, 0.498039);
+  border-radius: 4px;
+  color: rgb(153, 153, 153);
+  line-height: 140px;
+  padding-left: 32px;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 0px;
+}
+
+#icons {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 128px 128px 128px ;
+  grid-template-rows: 128px 128px 128px 128px 128px ;
+  
+}
+.icon {
+  margin: 0 auto;
+  cursor: var(--cursor_pointer);
+  
+}
+.icon p{
+  font-size: 0.7em;
+  font-weight: bold;
+  text-align: center;
+  margin:0;
+  padding: 0;
+  text-shadow: 0 0 5px #fff;
+
+
+}
+.icon:hover {
+  filter: brightness(120%);
+}
+
+.square_icon {
+  border: solid 4px var(--stroke-color);
+  border-radius: 5px;
+}
+
+
+.start_panel {
+  flex: 0;
+  z-index: 30;
+  float: left;
+  position: fixed;
+  left: 0;
+  bottom: 48px;
+  background: #fff;
+  width: 360px;
+  height: 480px;
+  border: solid 5px var(--muted);
+  border-radius: 10px 10px 5px 5px;
+  -webkit-box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+}
+
+#start_panel_header {
+  background: var(--muted);
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+#user_icon {
+  border: solid 3px #fff;
+  border-radius: 5px;
+  background: var(--user);
+  width: 54px;
+  height: 54px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  vertical-align: top;
+  
+  
+}
+.start_panel_button {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  cursor: var(--cursor_pointer);
+}
+
+.start_panel_button li{
+  padding: 5px;
+}
+
+.start_panel_button li:hover{
+  background: var(--transparent);
+}
+
+.start_panel_button img{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.ukagaka {
+  flex: 1;
+  z-index: 20;
+  float: right;
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+}
+
+#dialogue {
+  background: #fff;
+  border: solid 3px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 300px;
+}
+
+#phrase a{
+  color: var(--main);
+}
+
+#phrase a:hover{
+  text-decoration: wavy underline;
+}
+
+#bebby {
+  float: right;
+  cursor: var(--cursor_pointer);
+}
+
+.gentle-hover-shake img:hover {
+  animation: tilt-shaking 0.25s infinite;
+  user-select: none;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.layout-container {
+  display: flex;
+}
+
+
+#footer {
+  z-index: 30;
+  background-color: var(--main);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+ }
+ 
+ 
+/* WEBSITE */
+ 
+#topBar {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* NAVBAR */
+
+.navbar li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--muted);
+}
+
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar li:hover, .navbar li:active, .navbar li:focus {
+  border-right: none;
+}
+
+.navbar li a:hover, .navbar li a:active, .navbar li a:focus {
+    background-color: #fff;
+    color: var(--muted);
+    border-radius: 10px 10px 0 0;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 9px 2.2em;
+  text-decoration: none;
+}
+
+#container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#container h1, #container h2{
+  text-align: center;
+}
+
+#title {
+    margin: 0 auto;
+    margin-top: 42px;
+    font-size: var(--title-font-size);
+    flex-wrap: wrap;
+    display: flex;
+    flex: auto 1 1;
+    justify-content: center;
+    font-family: Bagel Fat One;
+    text-shadow: 0 0 5px var(--main);
+    color: var(--main);
+}
+
+#flex {
+  display: flex;
+}
+
+.aside {
+  background-color: #fff;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  font-size: smaller;
+  border: solid 4px var(--main);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--main);
+}
+
+main {
+  background-color: #fff;
+  flex: 1;
+  padding: 20px;
+  order: 2;
+  border: solid 4px var(--main);
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--main);
+}
+
+.aside a, .aside h1, .aside h2, main a, main h1, main h2{
+  color: var(--main);
+}
+
+#leftSidebar {
+ order: 1;
+}
+
+#rightSidebar {
+  order: 3;
+}
+
+.box {
+  background-color: var(--transparent);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.blinkie {
+  border-radius: 3px;
+  width: 150px;
+  height: 20px;
+  /*cursor: var(--cursor_pointer);*/
+  display: inline-block;
+}
+
+.ad{
+  border-radius: 3px;
+  width: 100%;
+  height: 53px;
+  display: inline-block;
+  background: var(--ad);
+  background-size: 100%;
+}
+
+/* GARDEN */
+.berry-button::before {
+  content: var(--berry);
+}
+
+
+#garden button {
+  background: none;
+  border: none;
+  font-size: 3vw;
+}
+
+#garden button:hover::before {
+  content: "🐛";
+}
+
+
+#garden {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+@media only screen and (max-width: 1024px) {
+  #flex {
+    flex-wrap: wrap;
+  }
+
+  .aside {
+    width: 100%;
+    margin: 10px 20px;
+  }
+  
+  #navbar ul {
+    flex-wrap: wrap;
+  }
+  
+  main {
+    order: 1;
+    margin: 10px 20px;
+  }
+
+  #leftSidebar {
+    order: 2;
+  }
+
+  #rightSidebar {
+    order: 3;
+  }
+
+  
+  header {
+    height: 34px;
+    font-size: 0.6em;
+  }
+  
+  .navbar li a {
+  padding: 9px 1.5em;
+}
+  
+  #title {
+    margin-top: 34px;
+  }
+  
+}
+
+
+/* GALLERY WRAPPER */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 20px;
+  padding-top: 62px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+/* (B) GALLERY IMAGES */
+.photo img {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+
+  /* (B3) IMAGE RESIZE */
+  /* cover | contain | fill | scale-down */
+  object-fit: cover;
+}
+
+/* (C) ON SMALL SCREENS */
+
+@media only screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  main {
+    order: 1;
+    margin: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* (D) OPTIONAL ZOOM ON HOVER */
+.photo img:hover {
+  cursor: var(--cursor_pointer);
+  filter: brightness(110%);
+}
+
+/* (E) FULLSCREEN MODE */
+.photo img.full {
+  position: fixed;
+  top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100%;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.7);
+}
+.photo img.full:hover {
+  z-index: 999;
+  transform: none;
+}
+
+#cbwrap{
+  margin-left: 170px;
+}
+
+
+
+
+/* DRAGGABLE */
+#draggable {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 9;
+  background-color: var(--background);
+  border: 5px solid var(--muted);
+  border-radius: 10px;
+  box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  user-select: none;
+}
+
+#draggable-header {
+  cursor: var(--cursor_move);
+  z-index: 10;
+  height: 38px;
+  width: 100%;
+  background-color: var(--muted);
+  border-bottom: 5px solid var(--muted);
+  color: #fff;
+}
+
+.window-button {
+  background-color: var(--muted);
+  background-size: 100%;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* WINDOW */
+.window{
+  border: 5px solid var(--muted);
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  transform: scale(1);
+  color: #fff;
+}
+
+.window:not(.window_no_animation):not(.window_moving){
+  transition: transform 0.2s, width 0.1s, height 0.1s, left 0.02s, right 0.02s;
+}
+
+.window *{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.window.window_alway_on_top{
+  z-index: 10;
+}
+
+.window.window_alway_on_top.window_selected{
+  z-index: 11;
+}
+
+.window .window_bar{
+  background-color: var(--muted);
+  height: 2em;
+  cursor: var(--cursor_move);
+  border-bottom: 5px solid var(--muted);
+}
+
+.window .window_bar, .text_not_selectable{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.window .window_bar > *{
+  display: inline-block;
+}
+
+.window .window_bar *{
+  transition: all 0.2s;
+}
+
+.window .window_bar .window_icon{
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: var(--cursor_pointer);
+}
+
+.window .window_bar .window_title{
+  padding-top: 6px;
+  overflow: hidden;
+  max-width: calc(100% - 150px);
+
+}
+
+.window .window_bar .window_toggle_buttons{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.window .window_bar .window_toggle_buttons:after{
+  clear: both;
+}
+
+.window .window_bar .window_toggle_buttons > *{
+  margin-left: 3px;
+  padding: 3px;
+  width: 1.8em;
+  border-radius: 5px;
+  text-align: center;
+  cursor: var(--cursor_pointer);
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.window .window_bar .window_toggle_buttons > *:hover{
+  filter: brightness(110%);
+  border: solid 3px;
+}
+
+.window.window_not_maximizable .window_button_toggle_maximize, .window.window_not_minimizable .window_button_minimize{
+  display: none;
+}
+
+.window .window_bar .window_toggle_buttons .window_button_close{
+  background-color: #ff676f;
+  border: solid 3px;
+}
+
+.window.window_selected .window_bar .window_toggle_buttons .window_button_close:hover{
+  filter: brightness(120%);
+}
+
+.window .window_content{
+  overflow: auto;
+  background-color: #fff;
+  position: absolute;
+  top: 2em;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.window.window_maximized:not(.window_minimized){
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.window.window_minimized{
+  transform: scale(0);
+}
+
+.window.window_hidden{
+  display: none;
+}
+
+.window.window_selected{
+  -webkit-box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 25px 5px rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+.window.window_selected .window_bar{
+  background-color: var(--muted);
+}
+
+.window.window_maximized .window_resize_handle, .window.window_not_resizable .window_resize_handle, .window.window_resizing .window_resize_handle{
+  display: none;
+}
+
+.window .window_resize_handle{
+  position: absolute;
+  display: block;
+  opacity: 0;
+}
+
+.window .window_resize_handle_n, .window_resize_handle_s{
+  height: 3px;
+  left: 0;
+  right: 0;
+}
+
+.window .window_resize_handle_w, .window .window_resize_handle_e{
+  width: 3px;
+  top: 0;
+  bottom: 0;
+}
+
+.window .window_resize_handle_n, .window .window_resize_handle_ne, .window .window_resize_handle_nw{
+  top: -3px;
+}
+
+.window .window_resize_handle_s, .window .window_resize_handle_se, .window .window_resize_handle_sw{
+  bottom: -3px;
+}
+
+.window .window_resize_handle_w, .window .window_resize_handle_sw, .window .window_resize_handle_nw{
+  left: -3px;
+}
+
+.window .window_resize_handle_e, .window .window_resize_handle_ne, .window .window_resize_handle_se{
+  right: -3px;
+}
+
+.window .window_resize_handle_ne, .window .window_resize_handle_se, .window .window_resize_handle_sw, .window .window_resize_handle_nw{
+  width: 3px;
+  height: 3px;
+}
+
+.window.window_bar_hidden .window_bar{
+  display: none;
+}
+
+.window.window_bar_hidden .window_content{
+  top: 0;
+}

@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+::selection {
+  background-color: #0fa601;
+  color: #13092D;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+	position: fixed;
+	right: 12px;
+	z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: 0;
+}
+
+.post ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: VT323;
+  white-space: normal;
+  
+}
+
+body {
+    background-color: #13092D;
+    font-size: 1.2em;
+    color: #0fa601;
+    text-shadow: 0 0 5px #0fa601;
+}
+
+pre {
+  font-size: 1.2em;
+}
+
+canvas {
+  border: 2px solid;
+  box-shadow: 0 0 5px #0fa601;
+}
+
+main {
+  padding: 50px;
+}
+
+a, button {
+  color: #0fa601;
+  text-shadow: 0 0 5px #0fa601;
+}
+
+span a{
+  margin-right: 20px;
+}
+
+#text-container {
+  white-space: pre-line;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.01s ease-in-out;
+}
+
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+.donut-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 10px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  pre {
+  font-size: 0.7em;
+}
+  
+}

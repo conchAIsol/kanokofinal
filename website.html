@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="test.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script defer src="scripts/applytheme.js"></script>
+  <script defer src="scripts/movingTitle.js"></script>
+  <script defer src="scripts/CopyToClipboard.js"></script>
+  <script defer src="scripts/generateButtonCode.js"></script>
+  <script defer src="scripts/timer.js"></script>
+  <script defer src="scripts/randomPhrase.js"></script>
+  <script defer src="scripts/showHide.js"></script>
+  
+  <link rel='shortcut icon' type='image/x-icon' href='arts/UI/strawberries.png' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>☆⋆°‧★Home</title>
+</head>
+
+<body style="background: url('arts/bg/bgBerry.png'); background-color: var(--transparent);">
+  
+  <header>
+    <span class="navbar">
+      <li style="border-right: none;"><a href="website.html" style="background-color: #fff;
+    color: var(--muted);
+    border-radius: 10px 10px 0 0;"><b>Home</b></a></li>
+      <li><a href="garden.html"><b>Web Garden</b></a></li>
+      <li><a href="cbox.html"><b>Chatbox</b></a></li>
+      <span id="window_buttons"><a href="index.html"><span class="window_button">_</span></a> <a href="index.html"><span class="window_button">⧉</span></a> <a href="index.html"><span class="window_button" id="close_button">✖</span></a></span>
+    </span>
+    
+  </header>
+  <div id="window_content" style="height: auto; padding-bottom: 60px;">
+  
+  <div id="container" >
+    <div id="title">KANOKO</div>
+    <div id="flex">       
+      <main>
+        <a href="virus.html" title="100% not a virus"><div class="ad"></div></a>
+        
+        
+        <h2>Dress-Up</h2>
+        <iframe frameBorder="0" width="360" height="240" style="border-radius: 5px;" src="games/dressup.html"></iframe>
+        <h2>Crossword</h2>
+        <script type="text/javascript">
+        boatload_puzzles_format = 'Portrait';</script>
+        <p>Loading <a href="https://www.boatloadpuzzles.com/playcrossword">
+        crossword puzzle</a>. One moment please.</p>
+        <script type="text/javascript" src="https://www.boatloadpuzzles.com/Crossword.js"></script>
+      </main>
+                
+      <aside id="leftSidebar" class="aside">
+        
+        
+        <h2>Cool Blinkies</h2>
+        <div class="blinkie" style="background: var(--blinkie1);"></div>
+        <div class="blinkie" style="background: var(--blinkie2);"></div>
+        <div class="blinkie" style="background: var(--blinkie3);"></div>
+        <div class="blinkie" style="background: var(--blinkie4);"></div>
+        <div class="blinkie" style="background: var(--blinkie5);"></div>
+        <div class="blinkie" style="background: var(--blinkie6);"></div>
+        <div class="blinkie" style="background: var(--blinkie7);"></div>
+        <div class="blinkie" style="background: var(--blinkie8);"></div>
+        <div class="blinkie" style="background: var(--blinkie9);"></div>
+        <div class="blinkie" style="background: var(--blinkie10);"></div>
+        <div class="blinkie" style="background: var(--blinkie11);"></div>
+        <div class="blinkie" style="background: var(--blinkie12);"></div>
+
+        
+      </aside>
+            
+      <aside id="rightSidebar" class="aside">
+    
+        
+        
+        <h2>My Blinkies</h2>
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer);" src="arts/blinkies/StrawberryBlinkie.gif" onclick="handleThemeButtonClick('hotpink', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/CherryBlinkie.gif" onclick="handleThemeButtonClick('red', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/OrangeBlinkie.gif" onclick="handleThemeButtonClick('orange', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/BananaBlinkie.gif" onclick="handleThemeButtonClick('yellow', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/AppleBlinkie.gif" onclick="handleThemeButtonClick('green', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/BlueberryBlinkie.gif" onclick="handleThemeButtonClick('turquoise', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/PlumBlinkie.gif" onclick="handleThemeButtonClick('indigo', this)">
+        <img style="border-radius: 3px; cursor: var(--cursor_pointer)" src="arts/blinkies/GrapesBlinkie.gif" onclick="handleThemeButtonClick('violet', this)">
+        
+      </aside>
+    </div>
+  </div>
+  </div>
+  
+  <div class="layout-container">
+
+	  <div id="show_hide_2" class="start_panel" style="display: none;">
+	    <div id="start_panel_header">
+	      <div id="user_icon"></div>
+	      <span style="vertical-align: middle;">User</span>
+	    </div>
+	    <table>
+        <tr>
+          <td>
+            <ul class="start_panel_button">
+	             <a href="index.html"><li><img src="arts/UI/notepad.png" width="20" height="20">Notepad</li></a>
+	             <li onclick="showHideDiv(1)"><img src="arts/UI/Bebby.png" width="20" height="20">Kanoko</li>
+               <a href="index.html"><li><img src="mic.png" width="20" height="20">Chat</li></a>
+	             <a href="website.html"><li><img src="arts/UI/explorer.png" width="20" height="20">Explorer</li></a>
+	             
+	             <a href="cbox.html"><li><img src="arts/UI/chat.png" widht="20" height="20"><span>Chatbox</span></li></a>
+	             <a href="paint.html"><li><img src="arts/UI/paint.png" widht="20" height="20"><span>Paint</span></li></a>
+	             <a href="terminal.html"><li><img src="arts/UI/terminal.png" widht="20" height="20"><span>Terminal</span></li></a>
+	           </ul>
+	           <div style="cursor: var(--cursor_pointer);"><script type="text/javascript" src="https://cdn.livetrafficfeed.com/static/online/live.v2.js?text=13092d&bg=ffffff&ro=0&tz=Europe%2FMoscow"></script></div>
+          </td>
+          <td style="background: var(--transparent);">
+            <ul class="start_panel_button">
+	             
+	           </ul>
+	           <hr>
+              color themes
+              <div id="theme-buttons"> <button id="hotpink" title="pink" class="theme-button" onclick="handleThemeButtonClick('hotpink', this)"></button> <button id="red" title="red" class="theme-button" onclick="handleThemeButtonClick('red', this)"></button> <button id="orange" title="orange" class="theme-button" onclick="handleThemeButtonClick('orange', this)"></button> <button id="yellow" title="yellow" class="theme-button" onclick="handleThemeButtonClick('yellow', this)"></button> <button id="green" title="green" class="theme-button" onclick="handleThemeButtonClick('green', this)"></button> <button id="turquoise" title="turquoise" class="theme-button" onclick="handleThemeButtonClick('turquoise', this)"></button> <button id="indigo" title="indigo" class="theme-button" onclick="handleThemeButtonClick('indigo', this)"></button> <button id="violet" title="violet" class="theme-button" onclick="handleThemeButtonClick('violet', this)"></button></div>
+            
+          </td>
+        </tr>
+      </table>
+	  </div>
+
+    <div id="show_hide_1" class="ukagaka" style="display: none;">
+      <div id="dialogue">
+	      <div id="random-phrase">
+          <div id="phrase">Hiii! Сlick on me and I'll tell u something good ^^ </div>
+        </div>
+	    </div>
+	    <span class="gentle-hover-shake"><img id="bebby" src="arts/Strawbebby.png" width="256" height="256" oncontextmenu="return false;"></span>
+    </div>
+  </div>
+
+	<div id="footer">
+	  <div id="bar"></div>
+	  <div class="buttons_row">
+	    <button id="start_button" class="button" onclick="showHideDiv(2)"><img src="arts/UI/WindowsIcon.png" widht="32" height="32"><span>Start</span></button>
+	    <button class="button"><a href="index.html"><img src="arts/UI/notepad.png" widht="32" height="32"></a></button>
+	    <button class="button" onclick="showHideDiv(1)"><img src="arts/UI/Bebby.png" width="32" height="32"></button>
+	    <button class="button"><a href="website.html"><img src="arts/UI/explorer.png" widht="32" height="32"></a></button>
+      <button class="button"><a href="index.html"><img src="mic.png" width="32" height="32"></a></button>
+	  </div>
+	  <div id="timer"></div>
+  </div>
+  
+  
+  
+</body>
+</html>
+
+    

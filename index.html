@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="test.css" rel="stylesheet" type="text/css" media="all">
+  
+  <script defer src="scripts/applytheme.js"></script>
+  <script defer src="scripts/movingTitle.js"></script>
+  <script defer src="scripts/window.js"></script>
+  <script defer src="scripts/timer.js"></script>
+  <script defer src="scripts/randomPhrase.js"></script>
+  <script defer src="scripts/showHide.js"></script>
+  <script defer src="scripts/draggable.js"></script>
+  
+  <link rel='shortcut icon' type='image/x-icon' href='arts/UI/strawberries.png' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>☆⋆°‧★Kanoko Desktop </title>
+</head>
+
+<body>
+
+	
+
+  <script>
+		var win;
+		var win1;
+		window.onload = function(){
+			
+			win = new Window("Readme.txt", {
+				state: WindowState.NORMAL,
+				size: {
+					width: 640,
+					height: 480
+				}, 
+				position: {
+					x: 900,
+					y: 10
+				},
+				selected: true,
+			});
+
+			win.content.id = "mycontent";	
+			win.content.innerHTML = '<textarea class="textarea">hiiiiii~ ♬ welcome to my little desktop^^ i will be live on pumpfun very soon! the CA will be posted in here soon after launch. :3 \n\nfeel free to snoop around... there is tons to explore! :3</textarea>';
+			
+			win1 = new Window("chat with me!", {
+				state: WindowState.NORMAL,
+				size: {
+					width: 640,
+					height: 640
+				},
+				selected: true,
+			})
+
+			win1.content.id = "mycontent";
+			win1.content.innerHTML = `<div id="chatwrapper" style="display: flex; flex-direction: column; height: 100%; width: 100%; background-color: lightpink;">
+										<div id="replybox" style="display: flex; flex-direction: column; justify-content: flex-end; flex: 1; width: 100%;"></div>
+											<div id="textbox" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 50px; width: 100%; background-color: transparent;">
+												<input type="text" id="userinput" placeholder="type here!" style="display: block; border-radius: 20px; height: 30px; border: 2px solid black;"/>
+												<button id='sendButton' style="border-radius: 20px; height: 30px; border: 2px solid black;">send</button>
+										</div>
+			</div>`
+
+			let sendBtn = document.getElementById('sendButton')
+			let replyBox = document.getElementById('replybox')
+			let userInput = document.getElementById('userinput')
+			var msgRef
+			var disabled = false
+			 function handleSend(){
+			console.log('executed')
+				let submit = userInput.value
+				socket.send(submit)
+				userInput.value = ''
+				console.log('sent data to server')
+				userInput.disabled = true
+				sendBtn.disabled = true
+				disabled = true 
+			}
+
+			function handleChange(data){
+				msgRef.textContent = data
+				userInput.disabled = false
+				sendBtn.disabled = false
+				userInput.placeholder = "type here!"
+				disabled = false
+				
+
+			}
+
+			userInput.addEventListener('keypress', function (event) {
+				if (event.key == 'Enter'){
+					if(userInput.value != '' && !disabled){
+						newMsg = document.createElement('p')
+						newMsg.id = 'myReply'
+						newMsg.textContent = userInput.value
+						newMsg.style.color = 'black'
+						replyBox.appendChild(newMsg)
+		
+						aiMsg = document.createElement('p')
+						aiMsg.id = 'aiReply'
+						aiMsg.textContent = 'let me think...'
+						userInput.placeholder = 'waiting for response...'
+						replybox.appendChild(aiMsg)
+						msgRef = aiMsg
+						handleSend()
+					}
+				}
+			})
+
+			sendBtn.addEventListener('click', function(){
+				if(userInput.value != '' && !disabled){
+					newMsg = document.createElement('p')
+					newMsg.id = 'myReply'
+					newMsg.textContent = userInput.value
+					newMsg.style.color = 'black'
+					replyBox.appendChild(newMsg)
+	
+					aiMsg = document.createElement('p')
+					aiMsg.id = 'aiReply'
+					aiMsg.textContent = 'let me think...'
+					replybox.appendChild(aiMsg)
+					msgRef = aiMsg
+					handleSend()
+				}
+				
+	
+			})
+	
+			socket = new WebSocket('ws://kanoko.onrender.com/ws')
+			socket.onopen = function(event){
+				console.log('socket connected')
+			}
+	
+			
+	
+			socket.onmessage = function(event){
+				console.log('received data')
+				handleChange(event.data)
+			};
+	
+			socket.binaryType = 'arraybuffer'
+	
+			socket.onmessage = function(event){
+				if(typeof event.data == 'string'){
+					console.log('received ai response')
+					handleChange(event.data)
+				}
+	
+				if(event.data instanceof ArrayBuffer){
+					console.log('received audio')
+					const audioBlob = new Blob([event.data], { type: 'audio/mpeg' })
+					const audioUrl = URL.createObjectURL(audioBlob);
+					const audio = new Audio(audioUrl)
+					audio.play()
+				}
+			}
+				
+			
+		}	
+		
+
+		
+
+
+	</script>
+	<script>
+		
+
+	</script>
+	
+	<div id="show_hide_3" style="display: none;">
+	  <div id="draggable">
+      <div id="draggable-header"><span style="padding:10px;">Pet.exe</span><div id="window_buttons"><span class="window_button" onclick="showHideDiv(3)">_</span><span class="window_button" id="close_button" onclick="showHideDiv(3)">  ✖</span></div></div>
+      <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Kanoko&dob=1004117358&gender=f&element=Earth&pet=https%3A%2F%2Fstrawbebby228.neocities.org%2Farts%2Ftamagotchi%2FBebbyBig.png&map=https%3A%2F%2Fstrawbebby228.neocities.org%2Farts%2Ftamagotchi%2FBgAutumn.png&background=&tablecolor=black&textcolor=black" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+  
+	<div id="icons">
+	   
+	   <div class="icon">
+	     <div onclick="win.show();"><img src="arts/UI/notepad.png" width="64" height="64"></div>
+	     <p>Notepad</p>
+	   </div>
+	   <div class="icon">
+	     <div onclick="showHideDiv(1)"><img src="arts/UI/Bebby.png" width="64" height="64"></div>
+	     <p>Kanoko</p>
+	   </div>
+	   <div class="icon">
+		<div onclick="win1.show();"><img src="mic.png" width="64" height="64"></div>
+		<p>Chat</p>
+	   </div>
+	   <div class="icon">
+	     <div><a href="website.html"><img src="arts/UI/explorer.png" width="64" height="64"></a></div>
+	     <p>Explorer</p>
+	   </div>
+	   <div class="icon">
+	     <div><a href="garden.html" target="content_box"><img src="arts/UI/strawberries.png" width="64" height="64"></a></div>
+	     <p>Web Garden</p>
+	   </div>
+	   <div class="icon">
+	     <a href="arts/Cool_Pic.jpg" ><img src="arts/UI/photos.png" width="64" height="64"></a>
+	     <p>Cool_Pic.jpg</p>
+	   </div>
+	   
+	   
+	   <div class="icon">
+	     <div onclick="showHideDiv(3)"><img src="arts/UI/tamagotchi.png" width="64" height="64"></div>
+	     <p>Pet</p>
+	   </div>
+	   <div class="icon">
+	     <div><a href="cbox.html"><img src="arts/UI/chat.png" width="64" height="64"></a></div>
+	     <p>Chatbox</p>
+	   </div>
+	   <div class="icon">
+	     <div><a href="terminal.html"><img src="arts/UI/terminal.png" width="64" height="64"></a></div>
+	     <p>Terminal</p>
+	   </div>
+	   
+	   <div class="icon">
+	     <a href="paint.html"><img src="arts/UI/paint.png" width="64" height="64"></a>
+	     <p>Paint</p>
+	   </div>
+
+	   <div class="icon">
+		<a href="https://t.me/kanokosol" target="_blank"><img src="telegram64.png" width="64" height="64"> </a>
+		<p>Telegram</p>
+	   </div>
+	   <div class="icon">
+		<a href="https://x.com/kanokosolana" target="_blank"><img src="x64.png" width="64" height="64"> </a>
+		<p>X</p>
+	   </div>
+	  
+	   
+	   
+	   
+	 </div>
+	  
+	  
+	<div class="layout-container">
+
+	  <div id="show_hide_2" class="start_panel" style="display: none;">
+	    <div id="start_panel_header">
+	      <div id="user_icon"></div>
+	      <span style="vertical-align: middle;">User</span>
+	    </div>
+	    <table>
+        <tr>
+          <td>
+            <ul class="start_panel_button">
+	            <li onclick="win.show();"><img src="arts/UI/notepad.png" width="20" height="20">Notepad</li>
+	             <li onclick="showHideDiv(1)"><img src="arts/UI/Bebby.png" width="20" height="20">Kanoko</li>
+				 <li onclick="win1.show();"><img src="mic.png" width="20" height="20">Chat</li>
+	             <a href="website.html"><li><img src="arts/UI/explorer.png" width="20" height="20">Explorer</li></a>
+	             
+	             <a href="cbox.html"><li><img src="arts/UI/chat.png" widht="20" height="20"><span>Chatbox</span></li></a>
+	             <a href="paint.html"><li><img src="arts/UI/paint.png" widht="20" height="20"><span>Paint</span></li></a>
+	             <a href="terminal.html"><li><img src="arts/UI/terminal.png" widht="20" height="20"><span>Terminal</span></li></a>
+	           </ul>
+	           <div style="cursor: var(--cursor_pointer);"><script type="text/javascript" src="https://cdn.livetrafficfeed.com/static/online/live.v2.js?text=13092d&bg=ffffff&ro=0&tz=Europe%2FMoscow"></script></div>
+          </td>
+          <td style="background: var(--transparent);">
+	           <hr>
+              color themes
+              <div id="theme-buttons"> <button id="hotpink" title="pink" class="theme-button" onclick="handleThemeButtonClick('hotpink', this)"></button> <button id="red" title="red" class="theme-button" onclick="handleThemeButtonClick('red', this)"></button> <button id="orange" title="orange" class="theme-button" onclick="handleThemeButtonClick('orange', this)"></button> <button id="yellow" title="yellow" class="theme-button" onclick="handleThemeButtonClick('yellow', this)"></button> <button id="green" title="green" class="theme-button" onclick="handleThemeButtonClick('green', this)"></button> <button id="turquoise" title="turquoise" class="theme-button" onclick="handleThemeButtonClick('turquoise', this)"></button> <button id="indigo" title="indigo" class="theme-button" onclick="handleThemeButtonClick('indigo', this)"></button> <button id="violet" title="violet" class="theme-button" onclick="handleThemeButtonClick('violet', this)"></button></div>
+            
+          </td>
+        </tr>
+      </table>
+	  </div>
+
+    <div id="show_hide_1" class="ukagaka">
+      <div id="dialogue">
+	      <div id="random-phrase">
+          <div id="phrase">Hiii! Сlick on me and I'll tell u something good ^^ </div>
+        </div>
+	    </div>
+	    <span class="gentle-hover-shake"><img id="bebby" src="arts/Strawbebby.png" width="256" height="256" oncontextmenu="return false;"></span>
+    </div>
+  </div>
+
+	<div id="footer">
+	  <div id="bar"></div>
+	  <div class="buttons_row">
+	    <button id="start_button" class="button" onclick="showHideDiv(2)"><img src="arts/UI/WindowsIcon.png" widht="32" height="32"><span>Start</span></button>
+	    <button class="button" onclick="win.show();"><img src="arts/UI/notepad.png" widht="32" height="32"></button>
+	    <button class="button" onclick="showHideDiv(1)"><img src="arts/UI/Bebby.png" width="32" height="32"></button>
+	    <button class="button"><a href="website.html"><img src="arts/UI/explorer.png" widht="32" height="32"></a></button>
+		<button class="button" onclick="win1.show();"><img src="mic.png" width="32" height="32"></button>
+	  </div>
+	  <div id="timer"></div>
+  </div>
+  
+  
+</body>
+</html>
