@@ -24,6 +24,7 @@ class CombinedServer:
         self.user_chats = {}
         self.app = web.Application()
         self.app.router.add_get('/', self.handle_http)
+        self.app.router.add_static('/', path='.', name='static')
         self.app.router.add_get('/ws', self.handle_websocket)
         static_path = os.path.join(os.path.dirname(__file__), 'static')
         arts_path = os.path.join(os.path.dirname(__file__), 'arts')
