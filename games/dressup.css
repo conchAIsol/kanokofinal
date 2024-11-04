@@ -1,0 +1,643 @@
+:root {
+    --title-font-size: 7vw;
+    --box-bg: #fff;
+    --background: #fff;
+    --stroke-color: #13092D;
+    --cursor_default: url(https://ani.cursors-4u.net/cursors/cur-11/cur1089.cur), default;
+    --cursor_pointer: url(https://ani.cursors-4u.net/cursors/cur-11/cur1076.cur), pointer;
+    --cursor_text: url(https://cur.cursors-4u.net/cursors/cur-6/cur590.cur), text;
+    --cursor_move: url(https://cur.cursors-4u.net/cursors/cur-6/cur587.cur), move;
+    
+    --width: 360px;
+    --height: 240px;
+    --width1: 200px;
+    --height1: 220px;
+    --width2: 190px;
+    --height2: 200px;
+    --padding: 0px;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Balsamiq Sans;
+    user-select: none;
+}
+
+body {
+    background: white;
+    color: var(--stroke-color);
+    cursor: var(--cursor_default);
+}
+
+button {
+  position:absolute;
+  right:10px;
+  font-family: Balsamiq Sans;
+  font-size: 0.8em;
+  font-weight: bold;
+  background: linear-gradient(180deg, #fff 0%, rgb(225,56,127) 100%);
+  text-shadow: 1px 1px 5px rgb(225,56,127);
+  color: #fff;
+  border-radius: 10px;
+  border: solid 3px rgb(225,56,127);
+  cursor: var(--cursor_pointer);
+}
+
+button:hover {
+    filter: brightness(110%);
+    right:5px;
+}
+
+button:active {
+    background: linear-gradient(0deg, #fff 0%, rgb(225,56,127) 100%);
+}
+
+/* BUTTONS */
+
+#nextpin{
+    top:20px;
+}
+
+#nexthat{
+    top:45px;
+}
+
+#nextdress{
+    top:70px;
+}
+
+#nextaccessory{
+    top:95px;
+}
+
+#nextshoe{
+    top:120px;
+}
+
+#reset{
+    top:145px;
+}
+
+#mp3-player audio{
+  position:absolute;
+  right:10px;
+  top:180px;
+  width: 120px;
+  height: 20px;
+  border: solid 3px rgb(225,56,127);
+  border-radius: 10px;
+  background-color: pink;
+  cursor: var(--cursor_pointer);
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  position:absolute;
+  right:5px;
+  top:210px;
+  font-size: 0.8em;
+  text-shadow: 0 0 5px black;
+  cursor: var(--cursor_pointer);
+  font-family: Bagel Fat One;
+}
+
+
+.divider {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  width: var(--width);
+  height: 15px;
+  background-image: url("https://i3.glitter-graphics.org/pub/732/732783yfogv414zc.gif");
+}
+
+#divider1 {
+  top: -5px;
+}
+
+#divider1 {
+  top: 345px;
+}
+
+#container{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    background-image: url("https://cur.glitter-graphics.net/pub/2870/2870894ivdfv2peud.gif");
+}
+
+#background{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: var(--width1);
+    height: var(--height1);
+    background-image: url("https://i.pinimg.com/564x/b1/cc/90/b1cc90cd1158378333421c561f35b0f1.jpg");
+    background-size: 100%;
+    background-color: white;
+    border: solid 5px rgb(225,56,127);
+    border-radius: 20px;
+}
+
+/* HAT */
+
+.hat1{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatPink.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hat2{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatOrange.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hat3{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatYellow.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hat4{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatGreen.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.hat5{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatBlue.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.hat6{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatIndigo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.hat7{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/HatPurple.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hat8{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#man{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Bebby.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+/* SHOES */
+
+.shoe1{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesPink.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe2{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesOrange.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe3{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesYellow.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe4{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesGreen.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe5{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesBlue.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe6{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesIndigo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.shoe7{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/ShoesPurple.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.shoe8{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* PINS */
+
+
+.pin1{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Curl.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pin2{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Sprout.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pin3{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Flower.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pin4{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Bow.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pin5{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Flower2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pin6{
+    z-index: 2;
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* ACCESSORIES */
+
+.accessory1{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Buttons.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory2{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+     background-image: url("dressup/Strawberry.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory3{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+     background-image: url("dressup/Raspberry.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory4{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Cherry.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory5{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Orange.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory6{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Apple.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory7{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Blueberry.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory8{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Grapes.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory9{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Flower1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory10{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Heart.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory11{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/Star.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.accessory12{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* DRESS */
+
+.dress1{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressPink.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress2{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressOrange.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress3{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressYellow.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress4{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressGreen.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress5{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressBlue.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress6{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressIndigo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress7{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: url("dressup/DressPurple.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dress8{
+    position:absolute;
+    top: var(--padding);
+    left: var(--padding);
+    width: var(--width2);
+    height: var(--height2);
+    background-image: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+

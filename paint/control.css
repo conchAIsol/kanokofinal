@@ -1,0 +1,84 @@
+:root {
+    --title-font-size: 7vw;
+    --box-bg: #fff;
+    --background: #fff;
+    --stroke-color: #13092D;
+    --cursor_default: url(https://cur.cursors-4u.net/cursors/cur-6/cur588.cur), default;
+    --cursor_pointer: url(https://cur.cursors-4u.net/cursors/cur-6/cur586.cur), pointer;
+    --cursor_text: url(https://cur.cursors-4u.net/cursors/cur-6/cur590.cur), text;
+    --cursor_move: url(https://cur.cursors-4u.net/cursors/cur-6/cur587.cur), move;
+}
+
+/* THEME SETTINGS */
+:root,
+
+:root.hotpink {
+    --main: #ff79a7;
+    --muted: #e02464;
+    --transparent: rgba(255, 121, 167, 0.8);
+}
+:root.red {
+    --main: #ff676f;
+    --muted: #d51f29;
+    --transparent: rgba(255, 103, 111, 0.8);
+}
+:root.orange {
+    --main: #ff9b21;
+    --muted: #e86705;
+    --transparent: rgba(255, 155, 33, 0.8);
+}
+:root.yellow {
+    --main: #f4dd27;
+    --muted: #cfab0c;
+    --transparent: rgba(244, 221, 39, 0.8);
+}
+:root.green {
+    --main: #35e825;
+    --muted: #0fa601;
+    --transparent: rgba(53, 232, 37, 0.8);
+}
+:root.turquoise {
+    --main: #2ac0f4;
+    --muted: #0077b9;
+    --transparent: rgba(42, 192, 244, 0.8);
+}
+:root.indigo {
+    --main: #264fff;
+    --muted: #0027cd;
+    --transparent: rgba(38, 79, 255, 0.8);
+}
+:root.violet {
+    --main: #c260ff;
+    --muted: #8015c3;
+    --transparent: rgba(194, 96, 255, 0.8);
+}
+
+#hotpink { background-color: #ff79a7; }
+#red { background-color: #ff676f; }
+#orange { background-color: #ff9b21; }
+#yellow { background-color: #f4dd27; }
+#green { background-color: #3bf22a; }
+#turquoise { background-color: #2ac0f4; }
+#indigo { background-color: #264fff; }
+#violet { background-color: #c260ff; }
+
+
+.control-button {
+	display:inline-block;
+	cursor:pointer;
+	padding:5px;
+}
+
+.control-button:hover {
+	background: var(--transparent);
+	border-radius: 10px;
+}
+
+.control-integer {
+	display:inline-block;
+}
+
+.control-container {
+	position:relative;
+	z-index:100;
+}
